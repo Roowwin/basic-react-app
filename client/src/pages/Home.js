@@ -40,20 +40,19 @@ class Home extends Component {
     }
    
     render(){
-        const {article , ad} =this.props;
-
+        const {article , ads} =this.props;
+        // console.log("this props in home is" , this.props);
         return (
         <div className="home-page">
             <Container >
                 <Row className="flex-md-row-reverse ">
                     <Col xs={12} md={3} >
-                        {ad.loading ?(
+                        {ads.loading ?(
                           <Spinner/> 
 
-                        )
-                        :
+                        ):
                         (
-                           <Advertisement advertisement={ad}/>
+                           <Advertisement {...ads}/>
                         )
 
                         }
@@ -63,7 +62,7 @@ class Home extends Component {
                         {article.loading ?(
                             <Spinner/>
                         ):(
-                            <Listing articles={article}/>
+                            <Listing {...article}/>
 
                         )}
                     </Col>
@@ -78,7 +77,7 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
     article: state.article,
-    ad:state.ad,
+    ads:state.ads,
 
   });
   export default connect(

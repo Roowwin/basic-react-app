@@ -6,7 +6,7 @@ let router = require('express').Router();
 
 //set default API response
 router.get('/newspaper/list', dataCt.getNews);
-router.get('/advertisement/list', dataCt.getAdvertisement);
+router.get('/promotion/list', dataCt.getAdvertisement);
 
 //Exporting API routes
 module.exports = router;

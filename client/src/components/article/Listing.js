@@ -19,13 +19,14 @@ class Listing extends Component {
     }
    
     render(){
-        const {articles} = this.props;
+        const {err , list , msg} = this.props;
+        console.log("the props are " , this.props)
         return (
             <div className="listing">
                 <Row>
-                    {articles.err?(
+                    {!err?(
                         <React.Fragment>
-                            {articles.list.map((item , index) =>(
+                            {list && list.map((item , index) =>(
                                 <Col lg='6' sm='12' key={index} className="article-column" >
                                     <ArticleItem article={item}/>
                                 </Col>
@@ -33,7 +34,7 @@ class Listing extends Component {
                         </React.Fragment>
                     ):(
                         <Col lg='12' className="text-center">
-                             <h3> {articles.msg} </h3>
+                             <h3> {msg} </h3>
                         </Col>
                     )}
                     

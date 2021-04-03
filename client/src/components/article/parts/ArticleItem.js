@@ -19,12 +19,13 @@ class ArticleItem extends Component {
    
     render(){
         var {article} =this.props;
+        var date = new Date(article.pageDateCreated);
         return(
             
                 <Card className="h-100 article">
                    <a href={article.url} rel="noreferrer" className="card-img-link" target="_blank"> <Card.Img variant="top" src={article.contentImageUrl} /> </a>
                     <Card.Body className="content">
-                        <p className="text-right timestamp mb-0"><small className="text-white">{article.pageDateCreated}</small> </p>
+                        <p className="text-right timestamp mb-0"><small className="text-white p-2 bg-primary">{date.toLocaleDateString('en-AU', {day: 'numeric',month: 'short',year: 'numeric'})}</small> </p>
                         
 
                         <a href={article.url} rel="noreferrer" target="_blank">  <Card.Title>{article.contentTitle}</Card.Title> </a>

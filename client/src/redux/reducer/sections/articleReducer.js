@@ -19,14 +19,16 @@ import {
         return {
             ...state ,
             loading:false,
+            err:null,
             list:action.payload,
-            msg:"Successfully , got the adverisement",
+            msg:"Successfully , got the articles",
         }
       }
       case NEWS_LOADER:{
         return {
             ...state ,
             loading:true,
+            err:null,
             msg:"",
         }
       }
@@ -34,7 +36,7 @@ import {
         return {
             ...state ,
             err:action.payload,
-            msg:"Sorry , can't display adverisement",
+            msg:"Sorry , can't display articles",
         }
       }
       

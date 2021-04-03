@@ -19,8 +19,8 @@ class Spinner extends Component {
     render(){
         return(
             
-            <div class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
+            <div className="loader">
+                <i className="fa fa-spinner fa-spin"></i>
             </div>
             
             

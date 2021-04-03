@@ -1,19 +1,20 @@
 
 // Express
-let express = require('express')
+let express = require('express');
+var bodyParser = require('body-parser');
+var path = require('path');
 
 //API routes
 let apiRoutes = require("./api/route")
 
-//View routes
-let viewRoute = require("./view/index")
+
 
 
 //Starting  App
 let app = express();
 
 //Assigning port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 
 //configure bodyparser to hande the post requests
 app.use(bodyParser.urlencoded({
@@ -27,7 +28,12 @@ app.use(bodyParser.json());
 app.use('/api', apiRoutes);
 
 //Using view route 
-app.use('/' , viewRoute);
+app.use(express.static(path.join(__dirname, "client/build")));
+
+app.get('*' , function(req,res){
+    var currentPath = path.join(__dirname, "client/build", "index.html");
+    res.sendFile(currentPath);
+});
 
 
 // Including api route

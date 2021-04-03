@@ -19,20 +19,21 @@ class Advertisement extends Component {
     }
    
     render(){
-        var {advertisement} = this.props;
+        var {list , err , msg} = this.props;
+        // console.log("this props is" , advertisement);
         return(
             <div className="sidebar-adveritsement hidden"> 
                 
 
-                {advertisement.err?(
+                {!err?(
                     <React.Fragment>
-                        {advertisement.map((item, index)=>(
+                        {list && list.map((item, index)=>(
                             <ImageAd ad={item} key={index} />
                         ))}
                     </React.Fragment>
                 ):(
                     <div className="text-center">
-                        <h3> {advertisement.msg} </h3>
+                        <h3> {msg} </h3>
                     </div>
                 )}
             </div>

@@ -18,6 +18,7 @@ import {
       case GET_AD_LIST:{
         return {
             ...state ,
+            err:null,
             loading:false,
             list:action.payload,
             msg:"Successfully , got the adverisement",
@@ -27,6 +28,7 @@ import {
         return {
             ...state ,
             loading:true,
+            err:null,
             msg:"",
         }
       }
@@ -34,6 +36,7 @@ import {
         return {
             ...state ,
             err:action.payload,
+
             msg:"Sorry , can't display adverisement",
         }
       }

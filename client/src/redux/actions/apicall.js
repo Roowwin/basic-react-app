@@ -20,7 +20,7 @@ import axios from 'axios';
 export const getArticleList = (skip =0 , limit=4) => dispatch => {
     dispatch(newsLoader());
     axios
-      .get('/api/article/list' , 
+      .get('/api/newspaper/list' , 
       {
         headers:{
           skip:skip , 
@@ -53,9 +53,9 @@ const newsLoader = (val = null)=>{
 export const getAdveritsementList = () => dispatch => {
     dispatch(addLoader());
     axios
-      .get('/api/article/list' )
+      .get('/api/promotion/list' )
       .then(res => {
-       
+        console.log('the response is' , res);
         dispatch({
           type: GET_AD_LIST,
           payload: res.data

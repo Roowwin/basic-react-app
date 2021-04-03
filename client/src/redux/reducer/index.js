@@ -7,7 +7,7 @@ import articleReducer from './sections/articleReducer';
 
 
 export default combineReducers({
-  ad:adReducer,
+  ads:adReducer,
   article:articleReducer,
 
 });
