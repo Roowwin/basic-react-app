@@ -17,7 +17,10 @@ Sample [JSON](https://gist.github.com/kieranjones/44d71c01636b004c1b8d5857f7bc0e
 ## How to run 
 
 ### Installing Dependencies 
-- `npm run install` or  `yarn run install`
+- Go to project folder (Node & React project)
+- Run the command `npm run install` or  `yarn` (NodeJs dependency)
+- Go to client folder (React Project) `cd client` 
+- Run the command `npm run install` or `yarn`
 
 
 
