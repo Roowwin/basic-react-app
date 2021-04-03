@@ -1,0 +1,35 @@
+{
+  "name": "newspapper",
+  "version": "1.0.0",
+  "description": "Displaying newspaper and advertisement , (React and Node Application)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client",
+    "server": "pm2 start server.js",
+    "stop": "pm2 stop server",
+    "deploy": "concurrently \"yarn run stop\" \"yarn run postbuild\" \"yarn run server\" ",
+    "server-local": "nodemon server.js",
+    "postbuild": "npm run build --prefix client",
+    "dev": "concurrently \"yarn run server-local\" \"yarn run client\""
+  },
+  "keywords": [
+    "node",
+    "newspaper",
+    "react",
+    "bootstrap",
+    "sass"
+  ],
+  "author": "sanjay adhikari",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7",
+    "pm2": "^4.5.6"
+  }
+}

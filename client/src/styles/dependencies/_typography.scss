@@ -1,0 +1,204 @@
+
+// Customizing the typography of the whole site.
+
+@mixin h1-styles($colour: $secondary) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $colour;
+    font-weight: $font-weight-normal;
+  
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
+  }
+  @mixin h2-styles($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 2.125rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-light;
+    @include mb(3);
+  
+    @include media-breakpoint-down(sm) {
+      font-size: 1.8rem;
+    }
+  
+    * + & {
+      @include mt(2);
+    }
+  }
+  
+  @mixin h3-styles($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 1.75rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-normal;
+    @include mb(3);
+  
+  
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
+  
+    * + & {
+      @include mt(2);
+    }
+  }
+  @mixin h4-styles($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 1rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-bold;
+  }
+  @mixin h5-styles($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-bold;
+  }
+  @mixin h6-styles($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 0.85rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-light;
+  }
+  @mixin p-style($colour: $text-colour) {
+    font-family: $primary-font;
+    line-height: 1.2;
+    font-size: 1rem;
+    color: $colour;
+    text-transform: none;
+    font-weight: $font-weight-normal;
+  }
+  
+  
+  
+  
+  @mixin force-text-colour($colour) {
+    h1, .h1-style,
+    h2, .h2-style,
+    h3, .h3-style,
+    h4, .h4-style,
+    h5, .h5-style,
+    h6, .h6-style,
+    p, .p-style,
+    ul, ol, li,
+    a:not(.btn) {
+      color: $colour!important;
+    }
+  
+    a:not(.btn) {
+      text-decoration: underline;
+    }
+  }
+  @mixin text-white() {
+    @include force-text-colour(#fff);
+  }
+  
+  @mixin blockquote-style() {
+    @include p(2);
+    @include media-breakpoint-up(sm) {
+      @include p(3);
+  
+      > * {
+        color: $primary;
+  
+        &:last-child {
+          @include mb(0);
+        }
+      }
+  
+      p {
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+  
+  
+  
+  @mixin ul-styles() {
+    ul {
+      list-style: none;
+      @include pl(3rem);
+  
+      li {
+        color: $primary;
+        position: relative;
+        @include my(2);
+  
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -1.5rem;
+          transform: translateX(-50%);
+          content: "\2022";
+        }
+      }
+    }
+  }
+  
+  @mixin ol-styles() {
+    ol {
+      @include pl(1.9rem);
+  
+      li {
+        color: $primary;
+        position: relative;
+        @include my(2);
+        @include pl(1.1rem);
+      }
+    }
+  }
+  
+  h1, .h1-style {
+    @include h1-styles;
+  }
+  h2, .h2-style {
+    @include h2-styles;
+  }
+  h3, .h3-style {
+    @include h3-styles;
+  }
+  h4, .h4-style {
+    @include h4-styles;
+  }
+  h5, .h5-style {
+    @include h5-styles;
+  }
+  h6, .h6-style {
+    @include h6-styles;
+  }
+  p, .p-style {
+    @include p-style;
+  }
+  
+  
+  blockquote {
+    @include blockquote-style;
+  }
+  
+  .text-white {
+    color: #fff!important;
+    @include text-white;
+  }
+  .text-primary {
+    color: $primary!important;
+    @include force-text-colour($primary);
+  }
+  .text-secondary {
+    color: $secondary!important;
+    @include force-text-colour($secondary);
+  }
+  
+  

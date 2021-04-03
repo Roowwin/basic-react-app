@@ -1,0 +1,12 @@
+
+
+// Importing overwrite variable
+@import './styles/variable';
+
+
+// Importing bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+
+// Importing the custom sytles
+@import './styles/main';

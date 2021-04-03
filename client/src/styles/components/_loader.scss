@@ -1,0 +1,7 @@
+.loader{
+    text-align: center;
+    @include p(3rem);
+    i{
+        font-size: 32px;
+    }
+}

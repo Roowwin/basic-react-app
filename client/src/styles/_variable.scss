@@ -1,0 +1,65 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+//
+//  Colours
+//
+
+$primary: 			#4fafbe;
+$secondary:     #d38d58;
+$dark:          #4d413b;
+$light:         #eeeeee;
+$grey:          #ccc;
+$overlay-colour: rgba($dark, 0.25);
+
+$text-colour:   #000;
+
+
+
+//
+//  Fonts
+//
+
+$primary-font: 'sans-serif';
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+
+
+
+//
+//  Spacing
+//
+
+$spacer: 1rem;
+
+$spacers: (
+  6: ($spacer * 6),
+  7: ($spacer * 9)
+);
+
+
+//
+//  Grid
+//
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+);

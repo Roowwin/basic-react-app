@@ -1,0 +1,39 @@
+.listing {
+    
+    .article { 
+        
+        &-column{
+            margin-bottom:20px;
+            @include media-breakpoint-between(sm ,md) {
+                &:nth-child(n+2){
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+
+                        &-img-link{
+                            width:40%;
+                        }
+                        &-body{
+                            width: 60%;
+                        }
+                        &-footer{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content{
+            position:relative;
+            .timestamp{
+                position: absolute;
+                // color:$primary;
+                right:10px;
+                top:-30px;
+            }
+        }
+        
+    }
+}
