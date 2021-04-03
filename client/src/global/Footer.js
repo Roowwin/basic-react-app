@@ -21,7 +21,7 @@ class Footer extends Component {
         return(
             <footer className="bg-light mt-4 py-4">
                 <Container>
-                 <p className="mb-0">&copy;2020 <span className="text-muted">All right Reserved</span>. <span className="float-right">Made with <i className="text-danger fa fa-heart"></i> by <a href="https://github.com/snj-adhikari" target="blank">Sanjay Adhikari </a>  </span>
+                 <p className="mb-0">&copy;2021 <span className="text-muted">All right Reserved</span>. <span className="float-right">Made with <i className="text-danger fa fa-heart"></i> by <a href="https://github.com/snj-adhikari" target="blank">Sanjay Adhikari </a>  </span>
                 </p>
                 </Container>
             </footer>
