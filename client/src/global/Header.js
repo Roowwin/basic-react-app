@@ -22,7 +22,7 @@ class Header extends Component {
         return(
             <header >
                 <Navbar fixed="top" collapseOnSelect expand="lg" bg="secondary" variant="dark">
-                    <Navbar.Brand  className="ml-auto mr-auto" href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand  className="ml-auto mr-auto" href="#home">Article Feed</Navbar.Brand>
             
                 </Navbar> 
           </header>

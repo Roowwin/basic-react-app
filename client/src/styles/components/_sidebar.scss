@@ -5,7 +5,7 @@
         @include media-breakpoint-down(sm){
            text-align: center;
         }
-        @include media-breakpoint-up(sm){
+        @include media-breakpoint-up(md){
             position: fixed;
         }
         
